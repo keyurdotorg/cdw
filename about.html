@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code and Data Works - About</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-placeholder"><img src="static/logo.png" alt="Code and Data Works Logo" style="width: 80px; height: 80px;"></div>
+            </div>
+            <div class="title-container">
+                <h1 class="typing-effect">Code and Data Works</h1>
+                <h2>Innovative Solutions for Your Business</h2>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,18 +31,24 @@
     <main>
         <section id="about">
             <h2>About Us</h2>
-            <p>Code and Data Works was founded in 2020 with a vision to bridge the gap between complex technological solutions and business needs. Our team of experienced professionals brings together diverse expertise in software engineering, data science, and business strategy.</p>
+            <p>Code and Data Works was founded with a vision to bridge the gap between complex technological and analytical solutions and business needs. Our experienced professionals brings together diverse expertise in software engineering, data analytics, project management, and business strategy.</p>
             <p>What sets us apart:</p>
             <ul>
-                <li>Over 50 years of combined industry experience</li>
-                <li>Proven track record of successful projects across various sectors</li>
+                <li>Experience working with Fortune 5 clients as well as clients with less than 500 employees</li>
+                <li>Proven track record of successful projects across various sectors such as telecommunications, risk management, logistics and retail</li>
                 <li>Commitment to continuous learning and staying ahead of tech trends</li>
                 <li>Strong focus on delivering measurable business value</li>
+                <li>East Coast based, but we work with clients all over the country</li>
+                <li>We are a small, nimble team that can move quickly and adapt to change</li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Code and Data Works. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Code and Data Works. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

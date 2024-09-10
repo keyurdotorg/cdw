@@ -9,8 +9,15 @@
 </head>
 <body>
     <header>
-        <h1>Code and Data Works</h1>
-        <h2>Innovative Solutions for Your Business</h2>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-placeholder"><img src="static/logo.png" alt="Code and Data Works Logo" style="width: 80px; height: 80px;"></div>
+            </div>
+            <div class="title-container">
+                <h1 class="typing-effect">Code and Data Works</h1>
+                <h2>Innovative Solutions for Your Business</h2>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -26,31 +33,40 @@
             <h2>Technical Portfolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <h3>AI-Powered Analytics Dashboard</h3>
-                    <p>A real-time analytics dashboard using machine learning algorithms to predict market trends and provide actionable insights.</p>
+                    <h3>Inventory Management Development</h3>
+                    <p>Sophisticated microservices and API development for inventory management, designed to handle high volumes of data and provide real-time updates.</p>
                     <button class="btn view-details" data-project="project1">View Details</button>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Blockchain Supply Chain Solution</h3>
-                    <p>A decentralized application (DApp) built on Ethereum to enhance transparency and traceability in supply chain management.</p>
+                    <h3>Customizable Power BI Dashboard</h3>
+                    <p>A customizable Power BI dashboard designed to provide real-time insights into property risk management, with a focus on ease of use and scalability.</p>
                     <button class="btn view-details" data-project="project2">View Details</button>
                 </div>
                 <div class="portfolio-item">
-                    <h3>IoT Smart Home System</h3>
-                    <p>An integrated IoT solution for home automation, featuring energy optimization, security monitoring, and voice-controlled assistants.</p>
+                    <h3>Cellular Connectivity Remediation</h3>
+                    <p>Project Management to remediate cellular connectivity for a Fortune 50 Client.</p>
                     <button class="btn view-details" data-project="project3">View Details</button>
                 </div>
+                <div class="portfolio-item">
+                    <h3>Machine-to-Machine (M2M) Cellular Data Analytics</h3>
+                    <p>Extract and analyze data from Android devices to provide better application support and management insights.</p>
+                    <button class="btn view-details" data-project="project4">View Details</button>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Database Migration from Cassandra to Google BigQuery</h3>
+                    <p>Migrate a large data warehouse from Cassandra to Google BigQuery for a Fortune 50 client.</p>
+                    <button class="btn view-details" data-project="project5">View Details</button>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> Code and Data Works. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Code and Data Works, LLC. All rights reserved.</p>
     </footer>
 
     <!-- Modal -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="closeModal">&times;</span>
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
             <h3>Key Features:</h3>

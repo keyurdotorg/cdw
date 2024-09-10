@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code and Data Works - Services</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-placeholder"><img src="static/logo.png" alt="Code and Data Works Logo" style="width: 80px; height: 80px;"></div>
+            </div>
+            <div class="title-container">
+                <h1 class="typing-effect">Code and Data Works</h1>
+                <h2>Innovative Solutions for Your Business</h2>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -40,7 +50,11 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Code and Data Works. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Code and Data Works. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

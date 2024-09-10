@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code and Data Works - Contact</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-placeholder"><img src="static/logo.png" alt="Code and Data Works Logo" style="width: 80px; height: 80px;"></div>
+            </div>
+            <div class="title-container">
+                <h1 class="typing-effect">Code and Data Works</h1>
+                <h2>Innovative Solutions for Your Business</h2>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,7 +32,7 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Ready to start your next project? Get in touch with us!</p>
-            <form>
+            <form id="contactForm" action="https://formsubmit.co/4fad7aace8ac89520bf617f008ca685b" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -32,17 +42,23 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button class="cta-button" type="submit" id="submitBtn">Send Message</button>
             </form>
+            <div id="formStatus"></div>
             <div class="contact-info">
-                <p>Email: info@codeanddataworks.com</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Address: 123 Tech Street, Innovation City, ST 12345</p>
+                <p>Email: contact@codeanddataworks.com</p>
+                <p>Phone: (201) 800-2189</p>
+                <p>Address: Rockaway, NJ</p>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Code and Data Works. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Code and Data Works. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

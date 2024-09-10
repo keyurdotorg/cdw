@@ -1,36 +1,58 @@
 const projectDetails = {
     project1: {
-        title: "AI-Powered Analytics Dashboard",
-        description: "A sophisticated real-time analytics dashboard that leverages machine learning algorithms to predict market trends and provide actionable insights for businesses.",
+        title: "Inventory Management Development",
+        description: "Sophisticated microservices and API development for inventory management, designed to handle high volumes of data and provide real-time updates.",
         features: [
-            "Real-time data processing and visualization",
-            "Machine learning-based predictive analytics",
-            "Customizable dashboards and reports",
-            "Integration with multiple data sources"
+            "Real-time inventory tracking",
+            "Automated reordering management",
+            "Integration with ERP systems",
+            "User-friendly interface for warehouse management"
         ],
-        technologies: "Python, TensorFlow, React, D3.js, AWS"
+        technologies: "Java, Spring Boot, Hibernate, AWS, Docker, Kubernetes, Jenkins, CI/CD"
     },
     project2: {
-        title: "Blockchain Supply Chain Solution",
-        description: "A decentralized application (DApp) built on Ethereum to enhance transparency and traceability in supply chain management, ensuring product authenticity and reducing fraud.",
+        title: "Customizable Power BI Dashboard",
+        description: "A customizable Power BI dashboard designed to provide various Fortune 500 companies real-time insights into their property risk management, with a focus on ease of use and scalability.",
         features: [
-            "Smart contract-based product tracking",
-            "Immutable record of supply chain events",
-            "Integration with IoT devices for automated data input",
-            "User-friendly interface for stakeholders"
+            "Customizable dashboards with user-defined parameters",
+            "User-friendly interface for property risk management",
+            "Company, user and dashboard level security access management",
+            "Row level security for database"
         ],
-        technologies: "Solidity, Ethereum, Web3.js, React, Node.js"
+        technologies: "Power BI, SQL, C#, Azure, Rest API"
     },
     project3: {
-        title: "IoT Smart Home System",
-        description: "An integrated IoT solution for home automation, featuring energy optimization, security monitoring, and voice-controlled assistants to enhance comfort and efficiency in modern homes.",
+        title: "Cellular Connectivity Remediation",
+        description: "Cellular connectivity remediation inside large domestic and international buildings for a Fortune 50 client.",
         features: [
-            "Central hub for controlling all smart devices",
-            "AI-powered energy optimization",
-            "Advanced security features with real-time alerts",
-            "Voice control integration with popular assistants"
+            "Project management and execution",
+            "Weekly status reporting",
+            "Vendor coordination and management",
+            "Project closeout"
         ],
-        technologies: "Raspberry Pi, Python, MQTT, React Native, TensorFlow Lite"
+        technologies: "Microsoft Project, Excel, Power BI, "
+    },
+    project4: {
+        title: "Machine-to-Machine (M2M) Cellular Data Analytics",
+        description: "Extract and analyze data from Android devices to provide better application support and management insights",
+        features: [
+            "Android API development",
+            "Wireless network data collection",
+            "Geospatial data analysis",
+            "Data visualization"
+        ],
+        technologies: "Android API, SQL, VB.NET, Power BI, Splunk"
+    },
+    project5: {
+        title: "Database Migration from Cassandra to Google BigQuery",
+        description: "Migrate a large data warehouse from Cassandra to Google BigQuery for a Fortune 50 client.",
+        features: [
+            "Data modeling and design",
+            "Data extraction and transformation",
+            "Data loading and integration",
+            "Microservice development"
+        ],
+        technologies: "Java, Spring Boot, Hibernate, BigQuery, Google Cloud Platform, Docker, Kubernetes, Jenkins, CI/CD"
     }
 };
 
@@ -39,7 +61,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 const modalFeatures = document.getElementById("modalFeatures");
 const modalTechnologies = document.getElementById("modalTechnologies");
-const closeBtn = document.getElementsByClassName("close")[0];
+const closeBtn = document.getElementsByClassName("closeModal")[0];
 
 document.querySelectorAll(".view-details").forEach(button => {
     button.addEventListener("click", function() {
@@ -47,7 +69,7 @@ document.querySelectorAll(".view-details").forEach(button => {
         modalTitle.textContent = project.title;
         modalDescription.textContent = project.description;
         modalFeatures.innerHTML = project.features.map(feature => `<li>${feature}</li>`).join("");
-        modalTechnologies.textContent = project.technologies;
+        modalTechnologies.innerHTML = project.technologies.split(',').map(tech => `<li>${tech}</li>`).join("");
         modal.style.display = "block";
     });
 });
